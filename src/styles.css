@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
+body { 
+    background-color: #eff0f1; /* Un gris azulado muy suave */
+} 
