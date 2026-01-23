@@ -19,8 +19,19 @@ export interface Toma {
   pastillas: Pastilla[];
 }
 
+export interface Mensaje {
+  mostrar: boolean;        // Interruptor principal para que aparezca o no
+  titulo?: string;         // Un encabezado corto (ej: "¡AVISO!")
+  texto: string;           // El cuerpo del mensaje (ej: "No tomar la pastilla X...")
+  tipo: 'info' | 'warning' | 'danger'; // Determina el color/gravedad
+  fechaDesde?: string;    // Para que sepas desde cuándo es válido el aviso
+  fechaHasta?: string;       // Para que sepas cuándo puedes dejar de mostrarlo
+}
+
+
 export interface Prescripcion {
   paciente: string;
   ultimaActualizacion: string;
+  mensaje: Mensaje;
   tomas: Toma[];
 }

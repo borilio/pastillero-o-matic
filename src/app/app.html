@@ -1,10 +1,72 @@
-<main class="max-w-md mx-auto px-4">
+<!-- Header -->
+<header class="w-full bg-white border-b border-gray-100 shadow-sm">
+  <div class="max-w-md mx-auto px-4 h-16 flex items-center gap-4">
+    
+    <div class="shrink-0 w-10 h-10">
+      <img src="img/logo.png" alt="Logo" class="w-full h-full rounded-lg object-cover">
+    </div>
+
+    <div class="flex flex-col justify-center">
+      <h1 class="font-black text-blue-900 leading-none italic text-lg uppercase">
+        Pastillero-O-Matic
+      </h1>
+      <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">
+        {{ miPrescripcion.paciente }}
+      </p>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- Mensaje de aviso, si lo hay -->
+<div id="aviso" class="mt-6">
+@if (miPrescripcion.mensaje.mostrar && !mensajeCerrado) {
+  <div class="max-w-md mx-auto px-4 mb-6 animate__animated animate__pulse animate__infinite">
+    <div [class]="'relative p-4 rounded-xl border-l-4 shadow-md flex gap-4 ' + 
+      (miPrescripcion.mensaje.tipo === 'danger' ? 'bg-red-50 border-red-500 text-red-900' : 
+       miPrescripcion.mensaje.tipo === 'warning' ? 'bg-amber-50 border-amber-500 text-amber-900' : 
+       'bg-blue-50 border-blue-500 text-blue-900')">
+      
+      <div class="text-xl shrink-0">
+        <i class="bi" [class]="miPrescripcion.mensaje.tipo === 'danger' ? 'bi-exclamation-triangle-fill' : 
+                                miPrescripcion.mensaje.tipo === 'warning' ? 'bi-exclamation-circle-fill' : 
+                                'bi-info-square-fill'"></i>
+      </div>
+
+      <div class="pr-6">
+        <h4 class="font-bold text-sm uppercase tracking-tight">
+          {{ miPrescripcion.mensaje.titulo || 'Aviso del Sistema' }}
+        </h4>
+        <p class="text-sm opacity-90 leading-snug mt-1">
+          {{ miPrescripcion.mensaje.texto }}
+        </p>
+        
+        @if (miPrescripcion.mensaje.fechaDesde || miPrescripcion.mensaje.fechaHasta) {
+          <p class="text-[10px] mt-2 font-semibold opacity-60 italic">
+            Válido: {{ miPrescripcion.mensaje.fechaDesde }} - {{ miPrescripcion.mensaje.fechaHasta }}
+          </p>
+        }
+      </div>
+
+      <button (click)="cerrarMensaje()" 
+              class="absolute top-3 right-3 text-lg leading-none hover:scale-125 transition-transform opacity-50 hover:opacity-100">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  </div>
+}
+</div>
+
+
+<!-- Cuerpo principal. Se muestran todas las tomas, cada una con sus pastillas -->
+<main class="max-w-md mx-auto px-4 space-y-8 pb-12">
 
     @for (toma of miPrescripcion.tomas; track toma.momento) {
 
     @if (toma.pastillas && toma.pastillas.length > 0) {
 
-    <section class="mb-8 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+    <section class="mb-8 bg-white rounded-2xl shadow border border-gray-100 overflow-hidden">
 
         <div class="p-4 flex justify-between items-center" [style.backgroundColor]="toma.color || '#f3f4f6'">
             <div>
@@ -100,3 +162,15 @@
     }
 
 </main>
+
+<!-- Footer -->
+<footer class="max-w-md mx-auto px-4 py-8 border-t border-gray-200">
+  <div class="text-center text-gray-400 text-xs font-medium">
+    <p>© 2026 · Pastillero-O-Matic</p>
+    <p class="mt-2">
+      Última actualización:
+      <span>{{ obtenerHaceCuanto(miPrescripcion.ultimaActualizacion) }}</span>
+      <span class="ml-1">({{ miPrescripcion.ultimaActualizacion }})</span>
+    </p>
+  </div>
+</footer>

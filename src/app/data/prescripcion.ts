@@ -31,7 +31,15 @@ import { Prescripcion } from "./prescipcion.model";
 
 export const PRESCRIPCION: Prescripcion = {
   paciente: "Señora Dolores",
-  ultimaActualizacion: "22/01/2026",
+  ultimaActualizacion: "2026-01-23",
+  mensaje: {
+    mostrar: true,
+    titulo: "Aviso",
+    texto: "Esto es un mensaje de prueba",
+    tipo: "info", // "danger" o "warning"
+    fechaDesde: "",
+    fechaHasta: "",
+  },
   tomas: [
     {
       momento: "Desayuno",
