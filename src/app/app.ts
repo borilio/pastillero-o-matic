@@ -52,4 +52,24 @@ export class App {
     return meses === 1 ? 'hace 1 mes' : `hace ${meses} meses`;
   }
 
+  /**
+   * Función que comprueba los atributos fechaDesde y fechaHasta para comprobar si debemos mostrar el aviso (si la fecha actual)
+   * está entre las dos fechas del mensaje.
+   * @returns true si debemos mostrar el mensaje o false en caso contrario.
+   */
+  public mostrarAvisoPorFecha(): boolean {
+    const m = this.miPrescripcion.mensaje;
+
+    if (!m.mostrar) return false;
+
+    // Si no hay rango de fechas, el mensaje se muestra siempre
+    if (!m.fechaDesde || !m.fechaHasta) return true;
+
+    const hoy = new Date().setHours(0, 0, 0, 0);
+    const inicio = new Date(m.fechaDesde).setHours(0, 0, 0, 0);
+    const fin = new Date(m.fechaHasta).setHours(0, 0, 0, 0);
+
+    return hoy >= inicio && hoy <= fin;
+  }
+
 }
