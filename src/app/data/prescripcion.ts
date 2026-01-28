@@ -32,11 +32,11 @@ import { Prescripcion } from "./prescipcion.model";
 
 export const PRESCRIPCION: Prescripcion = {
   paciente: "Señora Dolores",
-  ultimaActualizacion: "2026-01-23",
+  ultimaActualizacion: "2026-01-28",
   mensaje: {
     mostrar: false,
-    titulo: "Aviso",
-    texto: "Esto es un mensaje de prueba",
+    titulo: "En pruebas",
+    texto: "Este aviso se mostrará durante la fase de pruebas. Aquí podrás ver un aviso queramos mostrar en la app.",
     tipo: "info", // "danger" o "warning"
     fechaDesde: "",
     fechaHasta: "",
@@ -46,7 +46,7 @@ export const PRESCRIPCION: Prescripcion = {
       momento: "Desayuno",
       hora: "09:00",
       color: "#c6e5fc",
-      icono: "bi bi-sunrise-fill",
+      icono: "bi bi-brightness-alt-high-fill",
       pastillas: [
         { 
           nombre: "Omeprazol",
@@ -55,30 +55,30 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 cápsula",
           importancia: "media",
           motivo: "Protector de estómago",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "omeprazol-caja.png",
+          fotoPastilla: "omeprazol-capsula.png",
           observaciones: "Tomar mejor en ayunas, 30 min antes de desayunar",
         },
         { 
           nombre: "Coropres",
           principioActivo: "Carvedilol", 
-          dosis: "6,25mg", 
+          dosis: "6.25mg", 
           cantidad: "1 pastilla",
           importancia: "alta",
           motivo: "Tensión y corazón",
-          fotoCaja: "",
+          fotoCaja: "carvedilol-caja.png",
           fotoPastilla: "",
           observaciones: "No olvidar ninguna toma",
         },
         {
           nombre: "Memoria Farline",
           principioActivo: "Omega 3", 
-          dosis: "", 
+          dosis: "250mg", 
           cantidad: "1 cápsula blanda",
           importancia: "baja",
           motivo: "Suplemento memoria",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "memoria-caja.png",
+          fotoPastilla: "memoria-pastilla.png",
           observaciones: "", 
         },
         {
@@ -88,8 +88,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1/2 pastilla",
           importancia: "media",
           motivo: "Control de azúcar (Diabetes)",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "metformina-caja.png",
+          fotoPastilla: "metformina-pastilla.png",
           observaciones: "Tomar durante el desayuno", 
         },
         {
@@ -99,8 +99,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 pastilla",
           importancia: "alta",
           motivo: "Tensión",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "micardis-caja.png",
+          fotoPastilla: "micardis-pastilla.png",
           observaciones: "", 
         },
         {
@@ -110,8 +110,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 cápsula",
           importancia: "alta",
           motivo: "Estado de ánimo / Dolor crónico",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "duloxetina-caja.png",
+          fotoPastilla: "duloxetina-capsula.png",
           observaciones: "", 
         }
       ]
@@ -126,7 +126,7 @@ export const PRESCRIPCION: Prescripcion = {
     {
       momento: "Tarde",
       hora: "16:00",
-      color: "#e7bf7f",
+      color: "#f2a217",
       icono: "bi bi-sun-fill",
       pastillas: [
         { 
@@ -136,8 +136,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 cápsula",
           importancia: "media",
           motivo: "Relajante / Ansiedad",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "lexatin-caja.png",
+          fotoPastilla: "lexatin-capsula.png",
           observaciones: "En excepciones, puede tomar una cápsula extra a lo largo del día",
         },
         { 
@@ -147,38 +147,38 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 pastilla",
           importancia: "alta",
           motivo: "Circulación / Antigregante",
-          fotoCaja: "",
-          fotoPastilla: "",
-          observaciones: "Protección cardiovascular",
+          fotoCaja: "adiro-caja.png",
+          fotoPastilla: "adiro-pastilla.png",
+          observaciones: "Hace que la sangre esté más líquida y evita coágulos que podrían atascar los stents.",
         }
       ] 
     },
     {
       momento: "Noche",
       hora: "21:00",
-      color: "#f2d1f7",
+      color: "#dea0e8",
       icono: "bi bi-moon-fill",
       pastillas: [
         { 
           nombre: "Coropres",
           principioActivo: "Carvedilol", 
-          dosis: "6,25mg", 
+          dosis: "6.25mg", 
           cantidad: "1 pastilla",
           importancia: "alta",
           motivo: "Tensión y corazón",
-          fotoCaja: "",
+          fotoCaja: "carvedilol-caja.png",
           fotoPastilla: "",
           observaciones: "",
         },
         {
           nombre: "Memoria Farline",
           principioActivo: "Omega 3", 
-          dosis: "", 
+          dosis: "250mg", 
           cantidad: "1 cápsula blanda",
           importancia: "baja",
           motivo: "Suplemento memoria",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "memoria-caja.png",
+          fotoPastilla: "memoria-pastilla.png",
           observaciones: "", 
         },
         {
@@ -188,8 +188,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 pastilla",
           importancia: "baja",
           motivo: "Colesterol",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "atorvastatina-caja.png",
+          fotoPastilla: "atorvastatina-pastilla.png",
           observaciones: "", 
         },
         {
@@ -199,8 +199,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1/2 pastilla",
           importancia: "media",
           motivo: "Control de azúcar (Diabetes)",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "metformina-caja.png",
+          fotoPastilla: "metformina-pastilla.png",
           observaciones: "Tomar con la cena", 
         }
       ]
@@ -208,7 +208,7 @@ export const PRESCRIPCION: Prescripcion = {
     {
       momento: "Dormir",
       hora: "23:00",
-      color: "#9284f7",
+      color: "#6c5af0",
       icono: "bi bi-stars",
       pastillas: [
         { 
@@ -218,8 +218,8 @@ export const PRESCRIPCION: Prescripcion = {
           cantidad: "1 pastilla",
           importancia: "alta",
           motivo: "Dormir / Alucinaciones",
-          fotoCaja: "",
-          fotoPastilla: "",
+          fotoCaja: "quetiapina-caja.png",
+          fotoPastilla: "quetiapina-pastilla.png",
           observaciones: "Tomar justo antes de ir a la cama",
         }
       ]

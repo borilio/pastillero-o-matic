@@ -72,4 +72,25 @@ export class App {
     return hoy >= inicio && hoy <= fin;
   }
 
+  /**
+   * Función que retorna el color del texto adecuado para un color de fondo
+   * @param hexcolor Color de fondo que recibe la función
+   * @returns Clase de Tailwind con el color de texto adecuado para el color de fondo recibido
+   */
+  public getContraste(hexcolor: string): string {
+    if (!hexcolor) return 'text-gray-900';
+
+    // Quitamos el # si lo tiene
+    const color = hexcolor.replace('#', '');
+    const r = parseInt(color.substr(0, 2), 16);
+    const g = parseInt(color.substr(2, 2), 16);
+    const b = parseInt(color.substr(4, 2), 16);
+
+    // Fórmula de luminosidad
+    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+    // Si la luminosidad es alta, texto negro; si es baja, texto blanco
+    return yiq >= 128 ? 'text-gray-900' : 'text-white';
+  }
+
 }

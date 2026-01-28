@@ -1,59 +1,67 @@
-# PastilleroOMatic
+# 💊 Pastillero-O-Matic
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+Sistema de gestión de medicación personalizada para un paciente. Este proyecto permite visualizar de forma clara y sencilla las tomas diarias, con detalles visuales y fotos para evitar confusiones.
 
-## Development server
+## 🛠️ Archivo de Configuración Principal
 
-To start a local development server, run:
+Toda la personalización del tratamiento se realiza en un único lugar:
 
-```bash
-ng serve
-```
+📍 `src/app/data/prescripcion.ts`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+{{TODO: añadir enlace al archivo de github}}
 
-## Code scaffolding
+MODIFICAR LO DE ABAJO
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+### Cómo modificar el contenido
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+El archivo exporta un objeto llamado `miPrescripcion`. Aquí tienes los campos clave para "tu yo del futuro":
 
-```bash
-ng generate --help
-```
+#### 1. Información de Cabecera
+* **`paciente`**: Nombre que aparece bajo el logo.
+* **`ultimaActualizacion`**: Fecha en formato `YYYY-MM-DD`. El sistema calcula automáticamente el tiempo transcurrido (ej: "Actualizado hace 2 días").
 
-## Building
+#### 2. Mensajes de Aviso (`mensaje`)
+Ideal para cambios temporales o recordatorios importantes.
+* **`mostrar`**: `true` para que aparezca, `false` para ocultarlo.
+* **`tipo`**: 
+    * `'danger'` (Rojo): Avisos críticos.
+    * `'warning'` (Naranja): Precauciones.
+    * `'info'` (Azul): Información general.
+* **`fechaDesde` / `fechaHasta`**: Rango de fechas en el que el aviso será visible. Fuera de ese rango, desaparecerá solo.
 
-To build the project run:
+#### 3. Gestión de Tomas (`tomas`)
+Cada bloque horario (Desayuno, Comida, etc.) es un objeto dentro del array `tomas`:
+* **`color`**: Código Hexadecimal (ej: `#fef3c7`). *Nota: El sistema ajusta el color del texto automáticamente para mantener el contraste.*
+* **`icono`**: Nombre de clase de [Bootstrap Icons](https://icons.getbootstrap.com/) (ej: `bi-sun`, `bi-moon-stars`, `bi-cup-hot`).
 
-```bash
-ng build
-```
+#### 4. Medicamentos (`pastillas`)
+Dentro de cada toma, define las pastillas:
+* **`importancia`**: 
+    * `'alta'`: 3 puntos rojos.
+    * `'media'`: 2 puntos naranjas.
+    * `'baja'`: 1 punto verde.
+* **`fotoCaja` / `fotoPastilla`**: Nombre del archivo (ej: `omeprazol_caja.jpg`). Las imágenes deben estar en la carpeta `public/photos/`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📂 Estructura de Archivos
+* `src/app/data/prescripcion.ts`: **El cerebro**. Aquí va toda la info.
+* `public/photos/`: Carpeta donde debes subir las fotos de las cajas y pastillas.
+* `public/img/logo.png`: El logo que aparece en la cabecera.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🎨 Notas de Estilo (Tailwind)
+Si necesitas tocar el HTML, recuerda que estamos usando:
+* **Zoom**: El efecto de zoom se eliminó para evitar conflictos de scroll, pero se mantiene una estructura limpia de `w-32` para las fotos.
+* **Animaciones**: Usamos `animate.css`. Las clases como `animate__fadeInDown` hacen que los detalles se deslicen suavemente.
+* **Extensión**: Asegúrate de tener activa la extensión de **Tailwind CSS IntelliSense** en VS Code para ver los colores y autocompletar clases.
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🚀 Despliegue
+Para aplicar cambios:
+1. Edita `prescripcion.ts`.
+2. Sube los cambios a tu repositorio o servidor.
+3. ¡Listo! La Señora Dolores verá la versión actualizada al recargar la web.
