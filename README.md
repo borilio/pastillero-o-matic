@@ -133,7 +133,7 @@ Cada medicamento en una toma se define con estos atributos:
 
 1. Localiza el objeto `mensaje:`. Tendrá la siguiente estructura:
 
-   ```json
+   ```javascript
    mensaje: {
        mostrar: false,
        titulo: "En pruebas",
@@ -164,7 +164,7 @@ Cada medicamento en una toma se define con estos atributos:
 
 ## Estructura completa de `prescripcion.ts`
 
-````json
+````typescript
 /**
  * PRESCRIPCION.TS - Archivo de configuración de medicamentos
  * 
