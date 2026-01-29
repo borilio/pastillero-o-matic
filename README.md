@@ -127,7 +127,9 @@ Cada medicamento en una toma se define con estos atributos:
 1. Dentro de la toma deseada, localiza el array `pastillas: [`
 2. Copia un medicamento existente o crea uno nuevo
 3. Rellena todos los campos con la información del medicamento
-4. **Importante:** Los nombres de las fotos deben coincidir exactamente con los archivos en `public/photos/`
+
+> [!IMPORTANT]
+> Los nombres de las fotos deben coincidir **exactamente** con los archivos en `public/photos/`. Los nombres son sensibles a mayúsculas y minúsculas.
 
 #### Para mostrar un aviso:
 
@@ -156,9 +158,14 @@ Cada medicamento en una toma se define con estos atributos:
 
 ### Notas Importantes
 
-- ⚠️ **Formato de fechas:** Siempre usar `YYYY-MM-DD` (ej: 2026-01-28).
-- ⚠️ **Archivos de fotos:** Deben estar en la carpeta `public/photos/` y los nombres son sensibles a mayúsculas/minúsculas.
-- ⚠️ **Colores:** Usar formato hexadecimal precedido de `#` (ej: `"#c6e5fc"`).
+> [!WARNING]
+> **Formato de fechas:** Siempre usar `YYYY-MM-DD` (ej: 2026-01-28).
+
+> [!CAUTION]
+> **Archivos de fotos:** Los nombres son sensibles a mayúsculas/minúsculas. Deben coincidir exactamente con los nombres en `prescripcion.ts`.
+
+> [!NOTE]
+> **Colores:** Usar formato hexadecimal precedido de `#` (ej: `"#c6e5fc"`).
 
 ---
 
@@ -335,7 +342,8 @@ fotoCaja: "nombre-del-archivo.png"    // Busca este archivo en public/photos/
 fotoPastilla: "nombre-del-archivo.png" // Busca este archivo en public/photos/
 ```
 
-**Nota:** Asegúrate de que los nombres sean exactos (mayúsculas, minúsculas, extensión).
+> [!IMPORTANT]
+> Asegúrate de que los nombres de archivo sean **exactos** (mayúsculas, minúsculas, extensión). Los nombres son sensibles a estos cambios.
 
 ### 5. **Probar la Aplicación Localmente**
 
