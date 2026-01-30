@@ -8,7 +8,7 @@
 
     <div class="flex flex-col justify-center">
       <h1 class="font-black text-blue-900 leading-none italic text-lg uppercase">
-        Pastillero-O-Matic
+        {{ appName }}
       </h1>
       <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">
         {{ miPrescripcion.paciente }}
@@ -72,7 +72,7 @@
       <div>
         <h2 class="text-xl font-bold  uppercase tracking-tight">{{ toma.momento }}</h2>
         <span class="text-sm font-medium opacity-80">
-          <i class="bi bi-clock me-1"></i>{{ toma.hora }}
+          <i class="bi bi-clock-history me-1"></i>{{ toma.hora }}
         </span>
       </div>
       <i class="text-3xl opacity-80" [class]="toma.icono || 'bi bi-prescription2'"></i>
@@ -181,7 +181,7 @@
 <!-- Footer -->
 <footer class="max-w-md mx-auto px-4 py-8 border-t border-gray-200">
   <div class="text-center text-gray-400 text-xs font-medium">
-    <p>© 2026 · Pastillero-O-Matic</p>
+    <p>© 2026 · {{ appName | uppercase }} <span class="text-gray-300">v{{ appVersion }}</span></p>
     <p class="mt-2">
       Última actualización:
       <span>{{ obtenerHaceCuanto(miPrescripcion.ultimaActualizacion) }}</span>

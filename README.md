@@ -296,6 +296,20 @@ npm install
 
 Esto descargará las librerías necesarias para ejecutar la aplicación.
 
+### 2.1 **Cambiar el Nombre de la Aplicación (Opcional)**
+
+Si quieres cambiar el nombre que aparece en el header y footer, edita el archivo `package.json`:
+
+```json
+{
+  "name": "tu-nuevo-nombre-aqui",
+  "version": "1.0.0",
+  ...
+}
+```
+
+El nombre y la versión se mostrarán automáticamente en la aplicación. No necesitas modificar ningún archivo de código.
+
 ### 3. **Usar la plantilla de prescripción**
 
 En el proyecto encontrarás un archivo de referencia llamado **`prescripcion-plantilla.ts`** ubicado en:

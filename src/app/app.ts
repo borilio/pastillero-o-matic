@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Prescripcion } from './data/prescipcion.model';
 import { PRESCRIPCION } from './data/prescripcion';
+import packageJson from '../../package.json';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,10 @@ import { PRESCRIPCION } from './data/prescripcion';
 export class App {
   //Aquí se cargan toda la info de prescripcion.ts, listos para mostrarlos en el app.html
   public miPrescripcion: Prescripcion = PRESCRIPCION;
+  
+  // Información de la aplicación (desde package.json)
+  public appName = packageJson.name;
+  public appVersion = packageJson.version;
 
   // Variable local para permitir cerrar el mensaje de aviso
   public mensajeCerrado: boolean = false;
