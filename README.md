@@ -310,11 +310,9 @@ Este archivo contiene la estructura básica y comentada de cómo debe ser el arc
 
 - **Opción B:** Editar directamente `prescripcion.ts` utilizando la plantilla como referencia.
 
-- **Opción C:** Borra el archivo `prescripcion.ts` y renombra `prescripcion-plantilla.ts` a `prescripcion.ts`. Después edita `prescripcion.ts`. 
+- **Opción C:** Borra el archivo `prescripcion.ts` y renombra `prescripcion-plantilla.ts` a `prescripcion.ts`. Después edita `prescripcion.ts`.
 
-  
-
-  > [!caution]
+  > [!CAUTION]
   >
   > Cuidado con las acciones automáticas que puede hacer el IDE al editar o borrar los nombres de los archivos del proyecto.
 
