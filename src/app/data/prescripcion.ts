@@ -32,7 +32,7 @@ import { Prescripcion } from "./prescipcion.model";
 
 export const PRESCRIPCION: Prescripcion = {
   paciente: "Señora Dolores",
-  ultimaActualizacion: "2026-01-28",
+  ultimaActualizacion: "2026-01-31",
   mensaje: {
     mostrar: false,
     titulo: "En pruebas",
