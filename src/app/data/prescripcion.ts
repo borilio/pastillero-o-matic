@@ -71,17 +71,6 @@ export const PRESCRIPCION: Prescripcion = {
           observaciones: "No olvidar ninguna toma",
         },
         {
-          nombre: "Memoria Farline",
-          principioActivo: "Omega 3", 
-          dosis: "250mg", 
-          cantidad: "1 cápsula blanda",
-          importancia: "baja",
-          motivo: "Suplemento memoria",
-          fotoCaja: "memoria-caja.png",
-          fotoPastilla: "memoria-pastilla.png",
-          observaciones: "", 
-        },
-        {
           nombre: "Metformina",
           principioActivo: "Metformina", 
           dosis: "825mg", 
@@ -118,10 +107,22 @@ export const PRESCRIPCION: Prescripcion = {
     },
     {
       momento: "Comida",
-      hora: "14:00",
+      hora: "15:00",
       color: "#f4e88c",
       icono: "bi bi-fork-knife",
-      pastillas: []
+      pastillas: [
+          {
+          nombre: "Memoria Farline",
+          principioActivo: "Omega 3", 
+          dosis: "250mg", 
+          cantidad: "2 cápsulas blanda",
+          importancia: "baja",
+          motivo: "Suplemento memoria",
+          fotoCaja: "memoria-caja.png",
+          fotoPastilla: "memoria-pastilla.png",
+          observaciones: "Tomar las dos cápsulas juntas con los comida", 
+        }
+      ]
     },
     {
       momento: "Tarde",
@@ -169,17 +170,6 @@ export const PRESCRIPCION: Prescripcion = {
           fotoCaja: "carvedilol-caja.png",
           fotoPastilla: "",
           observaciones: "",
-        },
-        {
-          nombre: "Memoria Farline",
-          principioActivo: "Omega 3", 
-          dosis: "250mg", 
-          cantidad: "1 cápsula blanda",
-          importancia: "baja",
-          motivo: "Suplemento memoria",
-          fotoCaja: "memoria-caja.png",
-          fotoPastilla: "memoria-pastilla.png",
-          observaciones: "", 
         },
         {
           nombre: "Atorvastatina",
