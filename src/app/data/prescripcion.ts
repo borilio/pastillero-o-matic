@@ -115,7 +115,7 @@ export const PRESCRIPCION: Prescripcion = {
           nombre: "Memoria Farline",
           principioActivo: "Omega 3", 
           dosis: "250mg", 
-          cantidad: "2 cápsulas blanda",
+          cantidad: "2 cápsulas blandas",
           importancia: "baja",
           motivo: "Suplemento memoria",
           fotoCaja: "memoria-caja.png",
@@ -126,7 +126,7 @@ export const PRESCRIPCION: Prescripcion = {
     },
     {
       momento: "Tarde",
-      hora: "16:00",
+      hora: "17:00",
       color: "#f2a217",
       icono: "bi bi-sun-fill",
       pastillas: [
