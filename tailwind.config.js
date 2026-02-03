@@ -1,0 +1,1 @@
+// Este archivo es para configurar tailwind, pero solo lo usamos para que funcione la extensión de visual code (reconozca que el proyecto tiene taildwind)
