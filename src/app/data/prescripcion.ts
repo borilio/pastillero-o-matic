@@ -32,14 +32,14 @@ import { Prescripcion } from "./prescipcion.model";
 
 export const PRESCRIPCION: Prescripcion = {
   paciente: "Señora Dolores",
-  ultimaActualizacion: "2026-01-31",
+  ultimaActualizacion: "2026-03-27",
   mensaje: {
-    mostrar: false,
-    titulo: "En pruebas",
-    texto: "Este aviso se mostrará durante la fase de pruebas. Aquí podrás ver un aviso queramos mostrar en la app.",
+    mostrar: true,
+    titulo: "Pastilla del hierro",
+    texto: "La pastilla del hierro tiene que tomarla durante 3 meses. Empezó el 27/03/2026 y terminará el 27/06/2026",
     tipo: "info", // "danger" o "warning"
-    fechaDesde: "",
-    fechaHasta: "",
+    fechaDesde: "2026/03/27",
+    fechaHasta: "2026/07/15",
   },
   tomas: [
     {
@@ -121,6 +121,16 @@ export const PRESCRIPCION: Prescripcion = {
           fotoCaja: "memoria-caja.png",
           fotoPastilla: "memoria-pastilla.png",
           observaciones: "Tomar las dos cápsulas juntas con los comida", 
+        },
+        {
+          nombre: "Ferro Sanol",
+          principioActivo: "Hierro",
+          dosis: "100mg",
+          cantidad: "1 cápsula",
+          importancia: "baja",
+          motivo: "Suplemento de hierro para la anemia",
+          fotoPastilla: "ferrosanol-capsula.png",
+          observaciones: "Tomar con la comida"
         }
       ]
     },
