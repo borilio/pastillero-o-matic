@@ -32,11 +32,11 @@ import { Prescripcion } from "./prescipcion.model";
 
 export const PRESCRIPCION: Prescripcion = {
   paciente: "Señora Dolores",
-  ultimaActualizacion: "2026-03-27",
+  ultimaActualizacion: "2026-04-20",
   mensaje: {
     mostrar: true,
-    titulo: "Pastilla del hierro",
-    texto: "La pastilla del hierro tiene que tomarla durante 3 meses. Empezó el 27/03/2026 y terminará el 27/06/2026",
+    titulo: "Hierro",
+    texto: "El suplemento de hierro tiene que tomarlo durante 3 meses. Empezó el 27/03/2026 y terminará el 27/06/2026",
     tipo: "info", // "danger" o "warning"
     fechaDesde: "2026/03/27",
     fechaHasta: "2026/07/15",
@@ -49,17 +49,6 @@ export const PRESCRIPCION: Prescripcion = {
       icono: "bi bi-brightness-alt-high-fill",
       pastillas: [
         { 
-          nombre: "Omeprazol",
-          principioActivo: "Omeprazol", 
-          dosis: "20mg", 
-          cantidad: "1 cápsula",
-          importancia: "media",
-          motivo: "Protector de estómago",
-          fotoCaja: "omeprazol-caja.png",
-          fotoPastilla: "omeprazol-capsula.png",
-          observaciones: "Tomar mejor en ayunas, 30 min antes de desayunar",
-        },
-        { 
           nombre: "Coropres",
           principioActivo: "Carvedilol", 
           dosis: "6.25mg", 
@@ -69,6 +58,17 @@ export const PRESCRIPCION: Prescripcion = {
           fotoCaja: "carvedilol-caja.png",
           fotoPastilla: "",
           observaciones: "No olvidar ninguna toma",
+        },
+        { 
+          nombre: "Omeprazol",
+          principioActivo: "Omeprazol", 
+          dosis: "20mg", 
+          cantidad: "1 cápsula",
+          importancia: "media",
+          motivo: "Protector de estómago",
+          fotoCaja: "omeprazol-caja.png",
+          fotoPastilla: "omeprazol-capsula.png",
+          observaciones: "Tomar mejor en ayunas, 30 min antes de desayunar",
         },
         {
           nombre: "Metformina",
@@ -123,14 +123,15 @@ export const PRESCRIPCION: Prescripcion = {
           observaciones: "Tomar las dos cápsulas juntas con los comida", 
         },
         {
-          nombre: "Ferro Sanol",
+          nombre: "Ferroglicina",
           principioActivo: "Hierro",
-          dosis: "100mg",
-          cantidad: "1 cápsula",
+          dosis: "567.70mg",
+          cantidad: "1 vial bebible",
           importancia: "baja",
           motivo: "Suplemento de hierro para la anemia",
-          fotoPastilla: "ferrosanol-capsula.png",
-          observaciones: "Tomar con la comida"
+          fotoCaja: "",
+          fotoPastilla: "",
+          observaciones: "Tomar media hora antes del almuerzo"
         }
       ]
     },
